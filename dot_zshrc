@@ -24,8 +24,16 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 export PATH="/opt/anaconda3/condabin:$PATH"
 # <<< conda initialize <<<
 
-## Activate PATHS ##
-. ~/.config/shell/paths.sh
+#!/bin/zsh
+
+## ADD HOMEBREW ##
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+## Path to VScode ##
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:${PATH}"
+
+## .local ##
+. "$HOME/.local/bin/env"
 
 ## Default Editor ##
 export EDITOR="code --wait"
