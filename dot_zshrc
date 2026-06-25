@@ -1,0 +1,34 @@
+echo "${PATH}"
+
+## Settings
+setopt PROMPT_SUBST
+
+## Store the PATH var before adding mine ##
+export OLD_PATH="${PATH}"
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/adrianlozada/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+## Aliases ##
+alias ll='ls -lF --color=always'
+alias l='ls -F --color=always'
+alias la='ls -aF --color=always'
+alias icloud="cd /Users/adrianlozada/Library/Mobile\ Documents/com~apple~CloudDocs/"
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+export PATH="/opt/anaconda3/condabin:$PATH"
+# <<< conda initialize <<<
+
+## Activate PATHS ##
+. ~/.config/shell/paths.sh
+
+## Default Editor ##
+export EDITOR="code --wait"
+
+## hook direnv ##
+eval "$(direnv hook zsh)"
