@@ -102,3 +102,20 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+## My settings
+
+## ADD HOMEBREW ##
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+## Path to VScode ##
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:${PATH}"
+
+## .local ##
+. "$HOME/.local/bin/env"
+
+## Default Editor ##
+export EDITOR="code --wait"
+
+## hook direnv ##
+eval "$(direnv hook zsh)"
