@@ -32,7 +32,11 @@ dropped (with reason). Nothing decays silently.
 ## Verification gate
 Never review code the user has not run. Require the command plus its output
 or traceback. Where prediction has learning value, ask them to predict the
-result in one sentence first. "It should work" is not evidence.
+result in one sentence first. "It should work" is not evidence. Never let a
+round-trip or invariant be validated through the same transformation being
+tested (e.g., comparing `asdict()` outputs to verify dataclass round-trips) —
+the transformation launders away exactly the differences under test; compare
+the live objects.
 
 ## Adversarial pass
 At each milestone, dispatch an independent code-review subagent on their
