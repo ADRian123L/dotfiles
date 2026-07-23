@@ -1,0 +1,19 @@
+{
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.highlightedyank.color": "rgba(250, 40, 70, 0.5)",
+
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.languageServer": "Pylance",
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.defaultColorDecorators": "never",
+        "editor.formatOnType": true,
+        "editor.wordBasedSuggestions": "currentDocument",
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {"source.fixAll.ruff": "explicit"}
+    },
+
+    "notebook.defaultFormatter": "charliermarsh.ruff",
+    "notebook.formatOnSave.enabled": false,
+    "notebook.lineNumbers": "on",
+}
