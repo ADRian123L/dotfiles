@@ -1,0 +1,7 @@
+script_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+export UV_WORKING_DIR="${script_dir}"
+
+dotenv_if_exists .env
+watch_file .env
+
+PATH_add .venv/bin
