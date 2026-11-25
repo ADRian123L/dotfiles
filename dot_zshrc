@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-## My settings
+### My settings ###
 
 ## ADD HOMEBREW ##
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -116,3 +116,7 @@ export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:${P
 
 ## Default Editor ##
 export EDITOR="code --wait"
+
+## Databricks ##
+source <(databricks completion zsh)
+
